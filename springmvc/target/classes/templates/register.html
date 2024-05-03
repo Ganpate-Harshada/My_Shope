@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head th:include="components :: bootstrapcdn">
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<style>
+	body {
+		background-color: lightgoldenrodyellow;
+	}
+</style>
+
+<body>
+
+	<div th:replace="components :: navbar"></div>
+	<br>
+
+	<center><h1>Welcome to Register Page</h1></center>
+	<br>
+
+
+	<div class="container">
+		<form method="post" th:object="${obj}">
+			<div class="mb-3">
+				<label for="exampleInputName" class="form-lable">Name</label>
+				<input type="text" class="form-control" id="exampleInputName" th:field="*{name}">
+
+			</div>
+
+
+			<div class="mb-3">
+				<label for="exampleInputCity" class="form-lable">City</label>
+				<input type="text" class="form-control" id="exampleInputCity" th:field="*{city}">
+
+			</div>
+
+			<div class="mb-3">
+				<label for="exampleInputEmail" class="form-lable">Email address</label>
+				<input type="email" class="form-control" id="exampleInputEmail" th:field="*{email}"
+					aria-describedby="emailHelp">
+
+			</div>
+
+			<div class="mb-3">
+				<label for="exampleInputPassword" class="form-lable">Password</label>
+				<input type="password" class="form-control" id="exampleInputPassword" th:field="*{Password}">
+
+			</div>
+
+
+
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+
+
+
+
+
+
+	</div>
+
+	<div th:replace="components :: jscdn"></div>
+</body>
+
+</html>
